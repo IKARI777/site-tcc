@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="logoempresa.jpg" type="image/png">
+  <title>TLRS</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    section {
+      padding: 3rem 10%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    section p {
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TLRS - Accessibility</h1>
+    <p>TCC - Título do Projeto</p>
+  </header>
+
+  <nav>
+    <a href="#nos">Sobre Nós</a>
+    <a href="#sobre">Missão da empresa</a>
+    <a href="#informacoes">Projeto</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="nos">
+    <h2>Sobre Nós</h2>
+    <p>
+      Somos um grupo de estudantes da Escola Técnica Estadual de São Paulo que,
+       ao analisar demandas recorrentes de uma parte da população brasileira que sofre
+        com algum grau de deficiência visual e buscar respaldo científico, almeja trazer maior bem-estar
+         para deficientes visuais através de acessíveis elementos de nossa área de estudo, a Eletrônica.
+    </p>
+  </section>
+
+  <section id="sobre">
+    <h2>Missão da empresa</h2>
+    <p>
+      O objetivo da TLRS é trazer acessibilidade para pessoas com deficiência visual,
+      uma parcela relevante da população brasileira que sofre com a falta de implementação de artifícios de inclusão.
+    </p>
+  </section>
+   <section id="informacoes">
+    <h2>Projeto</h2>
+    <p>
+      Espaço para explicar do que se trata o projeto, a importância, 
+      objetivos e o problema que ele busca resolver.
+    </p>
+  </section>
+
+  <section id="projeto">
+    <h2>Fotos do Projeto</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="foto1.jpg" alt="Foto do projeto">
+        <p>Legenda da foto 1</p>
+      </div>
+      <div class="card">
+        <img src="foto2.jpg" alt="Foto do projeto">
+        <p>Legenda da foto 2</p>
+      </div>
+      <div class="card">
+        <img src="foto3.jpg" alt="Foto do projeto">
+        <p>Legenda da foto 3</p>
+      </div>
+    </div>
+  </section>
+
+ <section id="equipe">
+  <h2>Nossa Equipe</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="integrante1.jpg" alt="Foto integrante 1">
+      <h3>Nome Integrante 1</h3>
+      <p>Função no projeto</p>
+    </div>
+    <div class="card">
+      <img src="integrante2.jpg" alt="Foto integrante 2">
+      <h3>Nome Integrante 2</h3>
+      <p>Função no projeto</p>
+    </div>
+    <div class="card">
+      <img src="integrante3.jpg" alt="Foto integrante 3">
+      <h3>Nome Integrante 3</h3>
+      <p>Função no projeto</p>
+    </div>
+    <div class="card">
+      <img src="integrante4.jpg" alt="Foto integrante 4">
+      <h3>Nome Integrante 4</h3>
+      <p>Função no projeto</p>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: tlrs.acessibilidade@gmail.com</p>
+    <p>Endereço: Rua Exemplo, 123 - Cidade, Estado</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - TLRS. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
