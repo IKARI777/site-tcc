@@ -21,66 +21,72 @@
       line-height: 1.6;
     }
 
-   /* ----------- HEADER CORRIGIDO ----------- */
+   /* ----------- HEADER CORRIGIDO / RESPONSIVO ----------- */
     header {
       background: #ffffff;
-      padding: 1.5rem 0;
+      padding: 1rem 0;
       position: relative;
       text-align: center;
     }
 
-    /* Container invisível para centralizar */
     .header-wrapper {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 1rem;
+      padding: 0 1rem;
     }
 
-    /* Logo fixa na esquerda */
     .logo {
       position: absolute;
-      left: 30px;
-      height: 150px;
+      left: 20px;
+      height: 110px;
       width: auto;
-      max-width: 30%;
+      max-width: 180px;
     }
 
-    /* Título centralizado */
     header h1 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #2c3e50
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #2c3e50;
     }
 
-    /* Subtítulo */
     header p {
-      font-size: 1.2rem;
-      margin-top: 5px;
-      color: #2c3e50
+      font-size: 0.98rem;
+      margin-top: 6px;
+      color: #2c3e50;
     }
 
-    /* ---------------------------------------- */
-
-    /* ajuste: permitir quebra de itens do nav e tornar elementos mais flexíveis */
-    nav {
+    /* Nav: permite quebra em telas pequenas */
+    nav { 
       background: #34495e;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      flex-wrap: wrap; /* permite que os links quebrem linha em telas pequenas */
+      gap: 1rem;
+      padding: 0.8rem 1rem;
+      flex-wrap: wrap;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
+    nav a { color:#fff; text-decoration:none; padding:0.35rem 0.6rem; border-radius:6px; font-weight:600; }
+
+    /* Responsivo: em telas pequenas logo entra no fluxo para não sobrepor o título */
+    @media (max-width: 768px) {
+      .logo {
+        position: static;
+        height: 64px;
+        max-width: 140px;
+        margin-right: 0.6rem;
+      }
+      .header-wrapper { justify-content: center; }
+      header h1 { font-size: 1.3rem; }
+      header p { font-size: 0.95rem; }
     }
 
-    nav a:hover {
-      color: #1abc9c;
+    @media (max-width: 420px) {
+      .logo { height: 52px; max-width: 120px; }
+      header h1 { font-size: 1.05rem; }
+      nav { flex-direction: column; gap:0.5rem; padding:0.5rem; }
     }
 
     section {
