@@ -43,6 +43,7 @@
       left: 30px;
       height: 150px;
       width: auto;
+      max-width: 30%;
     }
 
     /* Título centralizado */
@@ -61,12 +62,14 @@
 
     /* ---------------------------------------- */
 
+    /* ajuste: permitir quebra de itens do nav e tornar elementos mais flexíveis */
     nav {
       background: #34495e;
       display: flex;
       justify-content: center;
       gap: 2rem;
       padding: 1rem;
+      flex-wrap: wrap; /* permite que os links quebrem linha em telas pequenas */
     }
 
     nav a {
@@ -112,6 +115,7 @@
       text-align: center;
     }
 
+    /* comportamento padrão para imagens e vídeo */
     .card img {
       width: 100%;
       height: 180px;
@@ -120,14 +124,12 @@
       margin-bottom: 1rem;
     }
 
-    /* adicione: centraliza vídeo dentro do card */
     .card video {
       display: block;
       margin: 0 auto;
-      width: 35%; /* mantém seu tamanho desejado */
+      width: 35%;
     }
 
-    /* legenda centralizada com a mesma largura do vídeo */
     .card video + p {
       width: 35%;
       margin: 0.5rem auto 0;
@@ -167,6 +169,54 @@
      transform: scale(1.15);
     }
 
+    /* ----------------- REGRAS RESPONSIVAS ----------------- */
+    @media (max-width: 1024px) {
+      .logo { height: 120px; max-width: 22%; left: 20px; }
+      header h1 { font-size: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      /* evita sobreposição: coloca logo em fluxo normal e reduz tamanho */
+      .logo {
+        position: static;
+        margin-right: auto;
+        height: 70px;
+        max-width: 160px;
+      }
+
+      .header-wrapper { justify-content: center; gap: 1rem; padding: 0 1rem; }
+      header h1 { font-size: 1.6rem; }
+      header p { font-size: 0.95rem; }
+
+      /* navegação mais compacta */
+      nav { gap: 0.8rem; padding: 0.6rem; }
+
+      /* cards em coluna para telas menores */
+      .grid { grid-template-columns: 1fr; }
+      .card img { height: auto; object-fit: contain; }
+
+      /* vídeo e legenda ocupam largura maior e ficam centralizados */
+      .card video, .card video + p {
+        width: 80%;
+      }
+
+      section { padding: 2rem 6%; }
+    }
+
+    @media (max-width: 420px) {
+      .logo { height: 56px; max-width: 120px; }
+      header h1 { font-size: 1.25rem; }
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+      }
+      .card img { border-radius: 6px; }
+      .card video, .card video + p { width: 90%; }
+      section { padding: 1.5rem 5%; }
+    }
+    /* ----------------------------------------------------- */
   </style>
 </head>
 

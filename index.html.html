@@ -21,63 +21,70 @@
       line-height: 1.6;
     }
 
-    /* ----------- HEADER CORRIGIDO ----------- */
+    /* ----------- HEADER CORRIGIDO / RESPONSIVO ----------- */
     header {
       background: #ffffff;
-      padding: 1.5rem 0;
+      padding: 1rem 0;
       position: relative;
       text-align: center;
     }
 
-    /* Container invisível para centralizar */
+    /* Container para centralizar título e manter logo fora do fluxo em telas grandes */
     .header-wrapper {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 1rem;
+      padding: 0 1rem;
     }
 
-    /* Logo fixa na esquerda */
+    /* Logo: absoluta em telas grandes, passa para fluxo em telas pequenas */
     .logo {
       position: absolute;
       left: 30px;
-      height: 150px;
+      height: 120px;
       width: auto;
+      max-width: 180px;
     }
 
     /* Título centralizado */
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       font-weight: bold;
-      color:#2c3e50
+      color: #2c3e50;
     }
 
     /* Subtítulo */
     header p {
-      font-size: 1.2rem;
-      margin-top: 5px;
-      color:#2c3e50
+      font-size: 1rem;
+      margin-top: 6px;
+      color: #2c3e50;
     }
 
-    /* ---------------------------------------- */
-
+    /* NAV: flex com wrap para não quebrar em telas pequenas */
     nav {
       background: #34495e;
       display: flex;
       justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
+      gap: 1.25rem;
+      padding: 0.9rem 1rem;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.2s, background 0.2s;
+      display: inline-block;
+      padding: 0.35rem 0.6rem;
+      border-radius: 6px;
     }
 
     nav a:hover {
       color: #1abc9c;
+      background: rgba(255,255,255,0.03);
     }
 
     section {
@@ -108,10 +115,11 @@
       background: white;
       border-radius: 10px;
       padding: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
       text-align: center;
     }
 
+    /* Imagens: manter largura total, em telas pequenas ajustar altura automática para não cortar bruscamente */
     .card img {
       width: 100%;
       height: 180px;
@@ -132,7 +140,8 @@
       font-size: 0.9rem;
       color: #bbb;
     }
-        #topBtn {
+
+    #topBtn {
       position: fixed;
       bottom: 30px;
       right: 30px;
@@ -143,15 +152,69 @@
       border-radius: 50%;
       font-size: 22px;
       cursor: pointer;
-      display: none; /* escondido inicialmente */
+      display: none;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
       transition: opacity 0.3s, transform 0.3s;
     }
 
     #topBtn:hover {
-     transform: scale(1.15);
+      transform: scale(1.12);
     }
 
+    /* ----------------- REGRAS RESPONSIVAS ----------------- */
+    @media (max-width: 1024px) {
+      .logo { height: 100px; max-width: 160px; left: 20px; }
+      header h1 { font-size: 1.75rem; }
+    }
+
+    @media (max-width: 768px) {
+      /* Logo volta para o fluxo do documento para evitar sobreposição */
+      .logo {
+        position: static;
+        height: 72px;
+        max-width: 140px;
+        margin: 0 1rem 0 0;
+      }
+
+      .header-wrapper {
+        justify-content: center;
+        align-items: center;
+      }
+
+      header h1 { font-size: 1.4rem; }
+      header p { font-size: 0.95rem; }
+
+      /* Navegação mais compacta */
+      nav {
+        gap: 0.6rem;
+        padding: 0.6rem 0.8rem;
+      }
+
+      /* Cards em coluna */
+      .grid { grid-template-columns: 1fr; }
+
+      /* Evita imagens cortadas demais em telas pequenas */
+      .card img {
+        height: auto;
+        object-fit: cover;
+      }
+
+      section { padding: 2rem 6%; }
+    }
+
+    @media (max-width: 420px) {
+      .logo { height: 56px; max-width: 120px; }
+      header h1 { font-size: 1.1rem; }
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
+      }
+      .card img { border-radius: 6px; }
+      section { padding: 1.2rem 5%; }
+    }
+    /* ----------------------------------------------------- */
   </style>
 </head>
 
