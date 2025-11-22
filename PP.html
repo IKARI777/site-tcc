@@ -120,6 +120,20 @@
       margin-bottom: 1rem;
     }
 
+    /* adicione: centraliza vídeo dentro do card */
+    .card video {
+      display: block;
+      margin: 0 auto;
+      width: 35%; /* mantém seu tamanho desejado */
+    }
+
+    /* legenda centralizada com a mesma largura do vídeo */
+    .card video + p {
+      width: 35%;
+      margin: 0.5rem auto 0;
+      text-align: center;
+    }
+
     footer {
       background: #2c3e50;
       color: white;
@@ -208,11 +222,11 @@
     <h2>Vídeo do Projeto</h2>
     <div class="grid">
       <div class="card">
-        <video width="100%" controls>
-          <source src="video_projeto.mp4" type="video/mp4">
+        <video width="35%" controls>
+          <source src="vidfunc.mp4" type="video/mp4">
           Seu navegador não suporta o elemento de vídeo.
         </video>
-        <p>Vídeo demonstrativo do projeto</p>
+        <p>Funcionamento do Projeto</p>
       </div>
     </div>
   </section>
