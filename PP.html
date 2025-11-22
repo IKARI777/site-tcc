@@ -21,7 +21,7 @@
       line-height: 1.6;
     }
 
-   /* ----------- HEADER CORRIGIDO / RESPONSIVO ----------- */
+   /* ----------- HEADER CORRIGIDO / RESPONSIVO (substituir este bloco) ----------- */
     header {
       background: #ffffff;
       padding: 1rem 0;
@@ -40,23 +40,46 @@
 
     .logo {
       position: absolute;
-      left: 20px;
-      height: 110px;
+      left: 30px;
+      height: 120px;
       width: auto;
       max-width: 180px;
     }
 
     header h1 {
-      font-size: 1.9rem;
-      font-weight: 700;
+      font-size: 2rem;
+      font-weight: bold;
       color: #2c3e50;
     }
 
     header p {
-      font-size: 0.98rem;
+      font-size: 1rem;
       margin-top: 6px;
       color: #2c3e50;
     }
+
+    @media (max-width: 1024px) {
+      .logo { height: 100px; max-width: 160px; left: 20px; }
+      header h1 { font-size: 1.75rem; }
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        position: static;
+        height: 72px;
+        max-width: 140px;
+        margin: 0 1rem 0 0;
+      }
+      .header-wrapper { justify-content: center; align-items: center; }
+      header h1 { font-size: 1.4rem; }
+      header p { font-size: 0.95rem; }
+    }
+
+    @media (max-width: 420px) {
+      .logo { height: 56px; max-width: 120px; }
+      header h1 { font-size: 1.1rem; }
+    }
+    /* ----------------------------------------------------- */
 
     /* Nav: permite quebra em telas pequenas */
     nav { 
