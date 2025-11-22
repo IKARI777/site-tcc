@@ -21,7 +21,7 @@
       line-height: 1.6;
     }
 
-   /* ----------- HEADER CORRIGIDO / RESPONSIVO (substituir este bloco) ----------- */
+   /* ----------- HEADER E NAV UNIFICADOS (substituir os blocos atuais) ----------- */
     header {
       background: #ffffff;
       padding: 1rem 0;
@@ -58,6 +58,33 @@
       color: #2c3e50;
     }
 
+    /* NAV: mesmo estilo do index */
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      padding: 0.9rem 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      padding: 0.35rem 0.6rem;
+      border-radius: 6px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+      background: rgba(255,255,255,0.03);
+    }
+
+    /* Responsividade unificada (mantém comportamento igual ao index) */
     @media (max-width: 1024px) {
       .logo { height: 100px; max-width: 160px; left: 20px; }
       header h1 { font-size: 1.75rem; }
@@ -73,43 +100,23 @@
       .header-wrapper { justify-content: center; align-items: center; }
       header h1 { font-size: 1.4rem; }
       header p { font-size: 0.95rem; }
+
+      /* navegação mais compacta */
+      nav { gap: 0.6rem; padding: 0.6rem 0.8rem; }
+      .grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 420px) {
       .logo { height: 56px; max-width: 120px; }
       header h1 { font-size: 1.1rem; }
-    }
-    /* ----------------------------------------------------- */
-
-    /* Nav: permite quebra em telas pequenas */
-    nav { 
-      background: #34495e;
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      padding: 0.8rem 1rem;
-      flex-wrap: wrap;
-    }
-
-    nav a { color:#fff; text-decoration:none; padding:0.35rem 0.6rem; border-radius:6px; font-weight:600; }
-
-    /* Responsivo: em telas pequenas logo entra no fluxo para não sobrepor o título */
-    @media (max-width: 768px) {
-      .logo {
-        position: static;
-        height: 64px;
-        max-width: 140px;
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
       }
-      .header-wrapper { justify-content: center; }
-      header h1 { font-size: 1.3rem; }
-      header p { font-size: 0.95rem; }
     }
-
-    @media (max-width: 420px) {
-      .logo { height: 52px; max-width: 120px; }
-      header h1 { font-size: 1.05rem; }
-      nav { flex-direction: column; gap:0.5rem; padding:0.5rem; }
-    }
+    /* ------------------------------------------------------------------------------ */
 
     section {
       padding: 3rem 10%;
