@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="project2.png" type="image/png">
+  <title>TLRS</title>
+
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ----------- HEADER CORRIGIDO ----------- */
+    header {
+      background: #ffffff;
+      padding: 1.5rem 0;
+      position: relative;
+      text-align: center;
+    }
+
+    /* Container invisível para centralizar */
+    .header-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Logo fixa na esquerda */
+    .logo {
+      position: absolute;
+      left: 30px;
+      height: 150px;
+      width: auto;
+    }
+
+    /* Título centralizado */
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color:#2c3e50
+    }
+
+    /* Subtítulo */
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color:#2c3e50
+    }
+
+    /* ---------------------------------------- */
+
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    section {
+      padding: 3rem 10%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    section p {
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+        #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      display: none; /* escondido inicialmente */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    #topBtn:hover {
+     transform: scale(1.15);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER NOVO -->
+  <header>
+    <div class="header-wrapper">
+      <img src="project.jpg" alt="Logo TLRS" class="logo">
+      <h1>TLRS - Accessibility</h1>
+    </div>
+    <p>Assistente de Compras para Pessoas com Deficiência Visual</p>
+  </header>
+
+  <nav>
+    <a href="#nos">Sobre Nós</a>
+    <a href="#sobre">Missão da empresa</a>
+    <a href="PP.html">Projeto</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="nos">
+    <h2>Sobre Nós</h2>
+    <p>
+      Somos um grupo de estudantes da Escola Técnica Estadual de São Paulo (ETESP) comprometidos em transformar a tecnologia em uma ferramenta de inclusão social. Observando as necessidades reais de pessoas com deficiência visual e apoiados por estudos e fundamentos científicos, decidimos aplicar nossos conhecimentos em Eletrônica para desenvolver soluções acessíveis que gerem autonomia, segurança e qualidade de vida.
+
+      Acreditamos que a engenharia deve servir às pessoas — e é por isso que unimos inovação, responsabilidade social e tecnologia assistiva em projetos que fazem diferença no dia a dia de quem mais precisa.
+    </p>
+  </section>
+
+  <section id="sobre">
+    <h2>Missão da empresa</h2>
+    <p>
+      A missão da TLRS é desenvolver soluções tecnológicas que promovam autonomia, inclusão e acessibilidade para 
+      pessoas com deficiência visual. Buscamos reduzir barreiras do cotidiano por meio de dispositivos inteligentes, 
+      simples de usar e acessíveis, garantindo que todos tenham direito à independência, à segurança e à participação plena 
+      na sociedade. Nosso compromisso é transformar tecnologia em inclusão — criando ferramentas que façam diferença real na vida
+      das pessoas.
+    </p>
+  </section>
+
+  <section id="equipe">
+    <h2>Nossa Equipe</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="integrante1.jpg" alt="Foto integrante 1">
+        <h3>Nome Integrante 1</h3>
+        <p>Função no projeto</p>
+      </div>
+      <div class="card">
+        <img src="integrante2.jpg" alt="Foto integrante 2">
+        <h3>Nome Integrante 2</h3>
+        <p>Função no projeto</p>
+      </div>
+      <div class="card">
+        <img src="integrante3.jpg" alt="Foto integrante 3">
+        <h3>Nome Integrante 3</h3>
+        <p>Função no projeto</p>
+      </div>
+      <div class="card">
+        <img src="integrante4.jpg" alt="Foto integrante 4">
+        <h3>Nome Integrante 4</h3>
+        <p>Função no projeto</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: tlrs.acessibilidade@gmail.com</p>
+    <p>Endereço: Rua blabla, 123 - remanso, tokyo</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 - TLRS. Todos os direitos reservados.</p>
+  </footer>
+  <button id="topBtn" onclick="scrollToTop()">↑</button>
+  <script>
+   const topBtn = document.getElementById("topBtn");
+
+     // mostrar o botão quando a página descer 300px
+   window.addEventListener("scroll", () => {
+     if (window.scrollY > 300) {
+       topBtn.style.display = "block";
+     } else {
+       topBtn.style.display = "none";
+     }
+    });
+
+     // função para subir suavemente
+   function scrollToTop() {
+     window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+     });
+   }
+ </script>
+</body>
+</html>

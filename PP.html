@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" href="project2.png" type="image/png">
+  <title>TLRS</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+   /* ----------- HEADER CORRIGIDO ----------- */
+    header {
+      background: #ffffff;
+      padding: 1.5rem 0;
+      position: relative;
+      text-align: center;
+    }
+
+    /* Container invisível para centralizar */
+    .header-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Logo fixa na esquerda */
+    .logo {
+      position: absolute;
+      left: 30px;
+      height: 150px;
+      width: auto;
+    }
+
+    /* Título centralizado */
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #2c3e50
+    }
+
+    /* Subtítulo */
+    header p {
+      font-size: 1.2rem;
+      margin-top: 5px;
+      color: #2c3e50
+    }
+
+    /* ---------------------------------------- */
+
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #1abc9c;
+    }
+
+    section {
+      padding: 3rem 10%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      text-align: center;
+    }
+
+    section p {
+      text-align: justify;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+    /* Botão de voltar ao topo */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      font-size: 22px;
+      cursor: pointer;
+      display: none; /* escondido inicialmente */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    #topBtn:hover {
+     transform: scale(1.15);
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-wrapper">
+      <img src="project.jpg" alt="Logo TLRS" class="logo">
+      <h1>TLRS - Accessibility</h1>
+    </div>
+    <p>Assistente de Compras para Pessoas com Deficiência Visual</p>
+  </header>
+  <nav>
+    <a href="index.html.html#nos">Sobre Nós</a>
+    <a href="index.html.html#sobre">Missão da empresa</a>
+    <a href="index.html.html">Home</a>
+    <a href="index.html.html#equipe">Equipe</a>
+    <a href="index.html.html#contato">Contato</a>
+  </nav>
+  <section id="informacoes">
+    <h2>Projeto</h2>
+    <p>
+      O Assistente de Compras para Pessoas com Deficiência Visual é uma solução desenvolvida para tornar a experiência de compra mais acessível, segura e independente. O projeto combina sistemas embarcados e tecnologias modernas de visão computacional para ajudar pessoas com deficiência visual a identificar produtos em tempo real dentro de mercados, lojas e outros ambientes comerciais.
+
+     O dispositivo utiliza um módulo ESP32-CAM para capturar e processar imagens e um Arduino Uno para gerenciar as interações com o usuário — incluindo áudio, luzes e botões físicos. Por meio de redes neurais treinadas na plataforma
+      <a href="https://www.edgeimpulse.com" target="_blank" style="color:#1abc9c; font-weight:bold; text-decoration:none;">
+        Edge Impulse
+     </a>, o sistema reconhece produtos automaticamente e oferece retorno sonoro e visual de forma rápida e intuitiva.
+
+      O objetivo é reduzir barreiras, ampliar a autonomia e proporcionar uma experiência de compra verdadeiramente inclusiva. Alinhado aos princípios da <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm" target="_blank" style="color:#1abc9c; font-weight:bold; text-decoration:none;">Lei Brasileira de Inclusão da Pessoa com Deficiência (Lei nº 13.146/2015)</a>,
+      o projeto visa contribuir para a construção de uma sociedade mais justa e acessível para todos.
+
+     Mais do que um protótipo, este projeto representa um passo importante rumo a um futuro onde a tecnologia trabalha a favor da independência, da dignidade e da inclusão.
+    </p>
+   </section>
+     <section id="projeto">
+    <h2>Fotos do Projeto</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="circu.png" alt="Foto do projeto">
+        <p>Circuito</p>
+      </div>
+      <div class="card">
+        <img src="projeto2.jpg" alt="Foto do projeto">
+        <p>Estrutura</p>
+      </div>
+      <div class="card">
+        <img src="func.jpg" alt="Foto do projeto">
+        <p>Funcionamento</p>
+      </div>
+    </div>
+  </section>
+  <section id="video">
+    <h2>Vídeo do Projeto</h2>
+    <div class="grid">
+      <div class="card">
+        <video width="100%" controls>
+          <source src="video_projeto.mp4" type="video/mp4">
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <p>Vídeo demonstrativo do projeto</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 - TLRS. Todos os direitos reservados.</p> 
+  </footer>
+  <button id="topBtn" onclick="scrollToTop()">↑</button>
+  <script>
+   const topBtn = document.getElementById("topBtn");
+
+     // mostrar o botão quando a página descer 300px
+   window.addEventListener("scroll", () => {
+     if (window.scrollY > 300) {
+       topBtn.style.display = "block";
+     } else {
+       topBtn.style.display = "none";
+     }
+    });
+
+     // função para subir suavemente
+   function scrollToTop() {
+     window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+     });
+   }
+ </script>
+</body>
+</html>
