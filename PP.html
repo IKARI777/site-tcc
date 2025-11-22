@@ -99,7 +99,6 @@
         position: static;
         height: 64px;
         max-width: 140px;
-        margin-right: 0.6rem;
       }
       .header-wrapper { justify-content: center; }
       header h1 { font-size: 1.3rem; }
@@ -246,6 +245,13 @@
       section { padding: 1.5rem 5%; }
     }
     /* ----------------------------------------------------- */
+    /* Centraliza legendas APENAS das imagens */
+     #projeto .card p {
+       text-align: center;
+       width: 100%;
+       margin: 0.5rem auto 0;
+    }
+
   </style>
 </head>
 
@@ -281,25 +287,25 @@
     </p>
    </section>
      <section id="projeto">
-    <h2>Fotos do Projeto</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="circu.png" alt="Foto do projeto">
-        <p>Circuito</p>
-      </div>
-      <div class="card">
-        <img src="projeto2.jpg" alt="Foto do projeto">
-        <p>Estrutura</p>
-      </div>
-      <div class="card">
-        <img src="func.jpg" alt="Foto do projeto">
-        <p>Funcionamento</p>
-      </div>
-    </div>
-  </section>
-  <section id="video">
-    <h2>Vídeo do Projeto</h2>
-    <div class="grid">
+       <h2>Fotos do Projeto</h2>
+       <div class="grid">
+         <div class="card">
+           <img src="circu.png" alt="Foto do projeto">
+           <p>Circuito</p>
+         </div>
+         <div class="card">
+         <img src="projeto2.jpg" alt="Foto do projeto">
+         <p>Estrutura</p>
+         </div>
+         <div class="card">
+         <img src="func.jpg" alt="Foto do projeto">
+         <p>Funcionamento</p>
+         </div>
+       </div>
+    </section>
+   <section id="video">
+     <h2>Vídeo do Projeto</h2>
+     <div class="grid">
       <div class="card">
         <video width="35%" controls>
           <source src="vidfunc.mp4" type="video/mp4">
